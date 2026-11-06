@@ -1,160 +1,84 @@
-![Cover](https://github.com/upstash/context7/blob/master/public/cover.png?raw=true)
+# context7-logent
 
-[![Add to Claude](https://img.shields.io/badge/Add_to-Claude-1C1917?style=for-the-badge&logo=claude&logoColor=D97757)](https://claude.ai/directory/37153cd7-b17c-470e-8b46-007e2859e0f3) [![Add to ChatGPT](https://img.shields.io/badge/Add_to-ChatGPT-1C1917?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI%2BPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTE0Ljk0OSA2LjU0N2EzLjk0IDMuOTQgMCAwIDAtLjM0OC0zLjI3MyA0LjExIDQuMTEgMCAwIDAtNC40LTEuOTM0QTQuMSA0LjEgMCAwIDAgOC40MjMuMiA0LjE1IDQuMTUgMCAwIDAgNi4zMDUuMDg2YTQuMSA0LjEgMCAwIDAtMS44OTEuOTQ4IDQuMDQgNC4wNCAwIDAgMC0xLjE1OCAxLjc1MyA0LjEgNC4xIDAgMCAwLTEuNTYzLjY3OUE0IDQgMCAwIDAgLjU1NCA0LjcyYTMuOTkgMy45OSAwIDAgMCAuNTAyIDQuNzMxIDMuOTQgMy45NCAwIDAgMCAuMzQ2IDMuMjc0IDQuMTEgNC4xMSAwIDAgMCA0LjQwMiAxLjkzM2MuMzgyLjQyNS44NTIuNzY0IDEuMzc3Ljk5NS41MjYuMjMxIDEuMDk1LjM1IDEuNjcuMzQ2IDEuNzguMDAyIDMuMzU4LTEuMTMyIDMuOTAxLTIuODA0YTQuMSA0LjEgMCAwIDAgMS41NjMtLjY4IDQgNCAwIDAgMCAxLjE0LTEuMjUzIDMuOTkgMy45OSAwIDAgMC0uNTA2LTQuNzE2bS02LjA5NyA4LjQwNmEzLjA1IDMuMDUgMCAwIDEtMS45NDUtLjY5NGwuMDk2LS4wNTQgMy4yMy0xLjgzOGEuNTMuNTMgMCAwIDAgLjI2NS0uNDU1di00LjQ5bDEuMzY2Ljc3OHEuMDIuMDExLjAyNS4wMzV2My43MjJjLS4wMDMgMS42NTMtMS4zNjEgMi45OTItMy4wMzcgMi45OTZtLTYuNTMtMi43NWEyLjk1IDIuOTUgMCAwIDEtLjM2LTIuMDFsLjA5NS4wNTdMNS4yOSAxMi4wOWEuNTMuNTMgMCAwIDAgLjUyNyAwbDMuOTQ5LTIuMjQ2djEuNTU1YS4wNS4wNSAwIDAgMS0uMDIyLjA0MUw2LjQ3MyAxMy4zYy0xLjQ1NC44MjYtMy4zMTEuMzM1LTQuMTUtMS4wOThtLS44NS02Ljk0QTMuMDIgMy4wMiAwIDAgMSAzLjA3IDMuOTQ5djMuNzg1YS41MS41MSAwIDAgMCAuMjYyLjQ1MWwzLjkzIDIuMjM3LTEuMzY2Ljc3OWEuMDUuMDUgMCAwIDEtLjA0OCAwTDIuNTg1IDkuMzQyYTIuOTggMi45OCAwIDAgMS0xLjExMy00LjA5NHptMTEuMjE2IDIuNTcxTDguNzQ3IDUuNTc2bDEuMzYyLS43NzZhLjA1LjA1IDAgMCAxIC4wNDggMGwzLjI2NSAxLjg2YTMgMyAwIDAgMSAxLjE3MyAxLjIwNyAyLjk2IDIuOTYgMCAwIDEtLjI3IDMuMiAzLjA1IDMuMDUgMCAwIDEtMS4zNi45OTdWOC4yNzlhLjUyLjUyIDAgMCAwLS4yNzYtLjQ0NW0xLjM2LTIuMDE1LS4wOTctLjA1Ny0zLjIyNi0xLjg1NWEuNTMuNTMgMCAwIDAtLjUzIDBMNi4yNDkgNi4xNTNWNC41OThhLjA0LjA0IDAgMCAxIC4wMTktLjA0TDkuNTMzIDIuN2EzLjA3IDMuMDcgMCAwIDEgMy4yNTcuMTM5Yy40NzQuMzI1Ljg0My43NzggMS4wNjYgMS4zMDMuMjIzLjUyNi4yODkgMS4xMDMuMTkxIDEuNjY0ek01LjUwMyA4LjU3NSA0LjEzOSA3LjhhLjA1LjA1IDAgMCAxLS4wMjYtLjAzN1Y0LjA0OWMwLS41Ny4xNjYtMS4xMjcuNDc2LTEuNjA3cy43NTItLjg2NCAxLjI3NS0xLjEwNWEzLjA4IDMuMDggMCAwIDEgMy4yMzQuNDFsLS4wOTYuMDU0LTMuMjMgMS44MzhhLjUzLjUzIDAgMCAwLS4yNjUuNDU1em0uNzQyLTEuNTc3IDEuNzU4LTEgMS43NjIgMXYybC0xLjc1NSAxLTEuNzYyLTF6Ii8%2BPC9zdmc%2B)](https://chatgpt.com/plugins/plugin_asdk_app_69ef18c674308191a2f952431f91ea61) [![Add to Cursor](https://img.shields.io/badge/Add_to-Cursor-1C1917?style=for-the-badge&logo=cursor&logoColor=white)](https://cursor.com/marketplace/upstash/context7) [![Add to VS Code](https://img.shields.io/badge/Add_to-VS_Code-1C1917?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iIzNEQTZGNSIgZD0iTTIzLjE1IDIuNTg3TDE4LjIxLjIxYTEuNDk0IDEuNDk0IDAgMCAwLTEuNzA1LjI5bC05LjQ2IDguNjMtNC4xMi0zLjEyOGEuOTk5Ljk5OSAwIDAgMC0xLjI3Ni4wNTdMLjMyNyA3LjI2MUExIDEgMCAwIDAgLjMyNiA4Ljc0TDMuODk5IDEyIC4zMjYgMTUuMjZhMSAxIDAgMCAwIC4wMDEgMS40NzlMMS42NSAxNy45NGEuOTk5Ljk5OSAwIDAgMCAxLjI3Ni4wNTdsNC4xMi0zLjEyOCA5LjQ2IDguNjNhMS40OTIgMS40OTIgMCAwIDAgMS43MDQuMjlsNC45NDItMi4zNzdBMS41IDEuNSAwIDAgMCAyNCAyMC4wNlYzLjkzOWExLjUgMS41IDAgMCAwLS44NS0xLjM1MnptLTUuMTQ2IDE0Ljg2MUwxMC44MjYgMTJsNy4xNzgtNS40NDh2MTAuODk2eiIvPjwvc3ZnPg%3D%3D)](https://marketplace.visualstudio.com/items?itemName=Upstash.context7-mcp)
+[upstash/context7](https://github.com/upstash/context7)의 실제 GitHub 포크예요. 원본 이력과
+MIT 고지를 그대로 보존하고, Logent의 `.lpg` 플러그인에 필요한 코드만 `logent` 브랜치에
+얹었어요.
 
-# Context7 - Up-to-date Docs for AI Agents
+- 포크: `logentworld/context7-logent` (parent `upstash/context7`)
+- upstream 커밋: `1ccf58e6e7f68357ef95c8b84181255d5ffa5c05`
+- upstream 패키지 버전: `1.0.0` (`package.json`)
+- 원본 README 원문: [`README.upstream.md`](README.upstream.md)
+- 변경 내역: [`NOTICE`](NOTICE)
 
-[![Website](https://img.shields.io/badge/Website-context7.com-blue)](https://context7.com) [![NPM Version](https://img.shields.io/npm/v/%40upstash%2Fcontext7-mcp?color=red)](https://www.npmjs.com/package/@upstash/context7-mcp) [![MIT licensed](https://img.shields.io/npm/l/%40upstash%2Fcontext7-mcp)](./LICENSE)
+## 무엇을 하나요
 
-[![繁體中文](https://img.shields.io/badge/docs-繁體中文-yellow)](./i18n/README.zh-TW.md) [![简体中文](https://img.shields.io/badge/docs-简体中文-yellow)](./i18n/README.zh-CN.md) [![日本語](https://img.shields.io/badge/docs-日本語-b7003a)](./i18n/README.ja.md) [![한국어 문서](https://img.shields.io/badge/docs-한국어-green)](./i18n/README.ko.md) [![Documentación en Español](https://img.shields.io/badge/docs-Español-orange)](./i18n/README.es.md) [![Documentation en Français](https://img.shields.io/badge/docs-Français-blue)](./i18n/README.fr.md) [![Documentação em Português (Brasil)](<https://img.shields.io/badge/docs-Português%20(Brasil)-purple>)](./i18n/README.pt-BR.md) [![Documentazione in italiano](https://img.shields.io/badge/docs-Italian-red)](./i18n/README.it.md) [![Dokumentasi Bahasa Indonesia](https://img.shields.io/badge/docs-Bahasa%20Indonesia-pink)](./i18n/README.id-ID.md) [![Dokumentation auf Deutsch](https://img.shields.io/badge/docs-Deutsch-darkgreen)](./i18n/README.de.md) [![Документация на русском языке](https://img.shields.io/badge/docs-Русский-darkblue)](./i18n/README.ru.md) [![Українська документація](https://img.shields.io/badge/docs-Українська-lightblue)](./i18n/README.uk.md) [![Türkçe Doküman](https://img.shields.io/badge/docs-Türkçe-blue)](./i18n/README.tr.md) [![Arabic Documentation](https://img.shields.io/badge/docs-Arabic-white)](./i18n/README.ar.md) [![Tiếng Việt](https://img.shields.io/badge/docs-Tiếng%20Việt-red)](./i18n/README.vi.md)
+`dev.logent.context7` 플러그인이 `context7` 도구를 제공해요. 라이브러리의 공식 문서에서
+최신 코드 예제와 설명을 찾아 모델에 돌려줘요. 네트워크 호출은 플러그인이 직접 하지 않고
+Logent 호스트의 공용 HTTPS 기능(`PluginHost.http`)만 써요.
 
-## ❌ Without Context7
+- 도구 이름: `context7`
+- 권한: 읽기 전용, 자식 에이전트에 노출
+- 입력: `query`(필수), `library`, `version`, `language`
+- 출력: 최대 24,000자. 넘으면 `도구 출력 한도에서 잘렸어요.`를 붙여 잘라요.
+- 응답 본문: 최대 1MiB. 호스트에 1MiB 한도를 요청하고 한 번 더 바이트 단위로 확인해요.
+- 문서 발췌는 항상 `<untrusted_web>` 경계 안에 넣고, 본문이 경계 태그를 흉내 내면
+  `&lt;untrusted_web&gt;`로 무력화해요.
 
-LLMs rely on outdated or generic information about the libraries you use. You get:
+## 설정
 
-- ❌ Code examples are outdated and based on year-old training data
-- ❌ Hallucinated APIs that don't even exist
-- ❌ Generic answers for old package versions
+| 키 | 종류 | 설명 |
+| --- | --- | --- |
+| `api-key` | SECRET | Context7 API 키예요. 없으면 도구가 설정 안내 오류를 돌려줘요. |
+| `endpoint` | TEXT | v3 검색 주소예요. 기본값은 `https://context7.com/api/v3/search`이고 HTTPS만 허용해요. |
 
-## ✅ With Context7
+키는 요청의 `Authorization: Bearer` 헤더에만 넣어요. 로그·진행 문구·오류문구·도구 출력에는
+키를 남기지 않고, 엔드포인트 검사도 요청 전에 해요.
 
-Context7 pulls up-to-date, version-specific documentation and code examples straight from the source — and gives them to your coding agent.
+## 저장소 구조
 
-```txt
-Create a Next.js proxy that checks for a valid JWT in cookies
-and redirects unauthenticated users to `/login`. use context7
+```text
+plugin/                 Logent Kotlin 플러그인 (GPL-3.0)
+plugin/src/main/...     dev.logent.context7 플러그인과 v3 검색 클라이언트
+plugin/src/test/...     파싱·파라미터·키 누락·응답 한도 단위 테스트
+scripts/                Gradle 실행·테스트·서명 .lpg 패키징
+gradle/, gradlew*       Gradle 9.7.1 wrapper
+plugin-api.lock         Logent Plugin API 3.3.0 고정
+content-public-key.der.b64  .lpg 서명 검증용 공개키
 ```
 
-```txt
-Configure a Cloudflare Worker script to cache
-JSON API responses for five minutes. use context7
-```
+upstream의 `setup/`, Claude 마켓플레이스 메타데이터, TypeScript 패키지와 문서는 저장소에
+원본 그대로 남아 있지만 `.lpg`에는 넣지 않아요. 플러그인 패키지에는 Kotlin 플러그인 코드만
+들어가요.
 
-```txt
-Show me the Supabase auth API for email/password sign-up.
-```
+## 검증
 
-Context7 fetches up-to-date code examples and documentation right into your coding agent's context. No tab-switching, no hallucinated APIs that don't exist, no outdated code generation.
-
-Works in two modes:
-
-- **CLI + Skills** — installs a skill that guides your agent to fetch docs using `ctx7` CLI commands (no MCP required)
-- **MCP** — registers a Context7 MCP server so your agent can call documentation tools natively
-
-## Installation
-
-> [!NOTE]
-> **API Key Recommended**: Get a free API key at [context7.com/dashboard](https://context7.com/dashboard) for higher rate limits.
-
-Set up Context7 for your coding agents with a single command. The `ctx7` CLI requires Node.js 22.13 or newer.
+Plugin API 3.3.0은 GitHub Packages에서 받아요. 읽기 권한 토큰을 환경 변수로 넘겨 주세요.
 
 ```bash
-npx ctx7 setup
+export GITHUB_ACTOR=<GitHub 사용자>
+export GITHUB_TOKEN=<packages:read 권한 토큰>
+./scripts/test.sh
 ```
 
-Authenticates via OAuth, generates an API key, and installs the appropriate skill. You can choose between CLI + Skills or MCP mode. Use `--cursor`, `--claude`, or `--opencode` to target a specific agent.
+JVM 단위 테스트와 Android lint를 실행해요. 테스트는 실제 Context7 서버를 부르지 않고
+가짜 transport로 요청·응답을 검사해요.
 
-To remove the generated setup later, run `npx ctx7 remove`. If you globally installed the CLI with `npm install -g ctx7`, remove that package separately with `npm uninstall -g ctx7`.
+서명된 `.lpg`까지 만들려면 Git 밖에 둔 개인 키 파일을 지정해요.
 
-To configure manually, use the Context7 server URL `https://mcp.context7.com/mcp` with your MCP client and pass your API key via the `Authorization: Bearer YOUR_API_KEY` header. See the link below for client-specific setup instructions.
-
-**[Manual Installation / Other Clients →](https://context7.com/docs/resources/all-clients)**
-
-## Important Tips
-
-### Use Library Id
-
-If you already know exactly which library you want to use, add its Context7 ID to your prompt. That way, Context7 can skip the library-matching step and directly retrieve docs.
-
-```txt
-Implement basic authentication with Supabase. use library /supabase/supabase for API and docs.
+```bash
+LOGENT_PLUGIN_SIGNING_KEY_FILE=/secure/logent-plugin.pem ./scripts/build.sh
 ```
 
-The slash syntax tells Context7 exactly which library to load docs for.
+`build/dist/`에 `.lpg`, `.aar`, 소스 ZIP, `SHA256SUMS`가 생겨요. 공개키를 따로 쓰려면
+`LOGENT_PLUGIN_PUBLIC_KEY_FILE`을 지정해요.
 
-### Specify a Version
+## upstream 병합
 
-To get documentation for a specific library version, just mention the version in your prompt:
+`logent` 브랜치는 upstream 이력을 그대로 두고 Logent 추가분만 얹어요. upstream 변경을
+가져올 때는 원본 README를 `README.upstream.md`로 다시 보존하고, `UPSTREAM_COMMIT`과
+`NOTICE`의 커밋을 갱신해요.
 
-```txt
-How do I set up a Next.js 16 proxy? use context7
-```
+## 라이선스
 
-Context7 will automatically match the appropriate version.
-
-### Add a Rule
-
-If you installed via `ctx7 setup`, a skill is configured automatically that triggers Context7 for library-related questions. To set up a rule manually instead, add one to your coding agent:
-
-- **Cursor**: `Cursor Settings > Rules`
-- **Claude Code**: `CLAUDE.md`
-- Or the equivalent in your coding agent
-
-**Example rule:**
-
-```txt
-Always use Context7 when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
-```
-
-## Available Tools
-
-### CLI Commands
-
-- `ctx7 library <name> <query>`: Searches the Context7 index by library name and returns matching libraries with their IDs.
-- `ctx7 docs <libraryId> <query>`: Retrieves documentation for a library using a Context7-compatible library ID (e.g., `/mongodb/docs`, `/vercel/next.js`).
-
-### MCP Tools
-
-- `resolve-library-id`: Resolves a general library name into a Context7-compatible library ID.
-  - `query` (required): The user's question or task (used to rank results by relevance)
-  - `libraryName` (required): The name of the library to search for
-- `query-docs`: Retrieves documentation for a library using a Context7-compatible library ID.
-  - `libraryId` (required): Exact Context7-compatible library ID (e.g., `/mongodb/docs`, `/vercel/next.js`)
-  - `query` (required): The question or task to get relevant documentation for
-  - `language` (optional): The programming language you write in, used to rank code examples in that language first
-
-## More Documentation
-
-- [CLI Reference](https://context7.com/docs/clients/cli) - Full CLI documentation
-- [MCP Clients](https://context7.com/docs/resources/all-clients) - Manual MCP installation for 30+ clients
-- [Adding Libraries](https://context7.com/docs/adding-libraries) - Submit your library to Context7
-- [Troubleshooting](https://context7.com/docs/resources/troubleshooting) - Common issues and solutions
-- [API Reference](https://context7.com/docs/api-guide) - REST API documentation
-- [Developer Guide](https://context7.com/docs/resources/developer) - Run Context7 MCP locally
-
-## Packages
-
-- [`@upstash/context7-mcp`](https://www.npmjs.com/package/@upstash/context7-mcp) - MCP server
-- [`ctx7`](https://www.npmjs.com/package/ctx7) - CLI
-- [`@upstash/context7-sdk`](https://www.npmjs.com/package/@upstash/context7-sdk) - TypeScript SDK
-- [`@upstash/context7-tools-ai-sdk`](https://www.npmjs.com/package/@upstash/context7-tools-ai-sdk) - Vercel AI SDK tools
-- [`@upstash/context7-pi`](https://www.npmjs.com/package/@upstash/context7-pi) - pi.dev extension
-
-## Disclaimer
-
-1- Context7 projects are community-contributed and while we strive to maintain high quality, we cannot guarantee the accuracy, completeness, or security of all library documentation. Projects listed in Context7 are developed and maintained by their respective owners, not by Context7. If you encounter any suspicious, inappropriate, or potentially harmful content, please use the "Report" button on the project page to notify us immediately. We take all reports seriously and will review flagged content promptly to maintain the integrity and safety of our platform. By using Context7, you acknowledge that you do so at your own discretion and risk.
-
-2- This repository hosts the MCP server’s source code. The supporting components — API backend, parsing engine, and crawling engine — are private and not part of this repository.
-
-## 🤝 Connect with Us
-
-Stay updated and join our community:
-
-- 📢 Follow us on [X](https://x.com/context7ai) for the latest news and updates
-- 🌐 Visit our [Website](https://context7.com)
-- 💬 Join our [Discord Community](https://upstash.com/discord)
-
-## 📺 Context7 In Media
-
-- [Better Stack: "Free Tool Makes Cursor 10x Smarter"](https://youtu.be/52FC3qObp9E)
-- [Cole Medin: "This is Hands Down the BEST MCP Server for AI Coding Assistants"](https://www.youtube.com/watch?v=G7gK8H6u7Rs)
-- [Income Stream Surfers: "Context7 + SequentialThinking MCPs: Is This AGI?"](https://www.youtube.com/watch?v=-ggvzyLpK6o)
-- [Julian Goldie SEO: "Context7: New MCP AI Agent Update"](https://www.youtube.com/watch?v=CTZm6fBYisc)
-- [JeredBlu: "Context 7 MCP: Get Documentation Instantly + VS Code Setup"](https://www.youtube.com/watch?v=-ls0D-rtET4)
-- [Income Stream Surfers: "Context7: The New MCP Server That Will CHANGE AI Coding"](https://www.youtube.com/watch?v=PS-2Azb-C3M)
-- [AICodeKing: "Context7 + Cline & RooCode: This MCP Server Makes CLINE 100X MORE EFFECTIVE!"](https://www.youtube.com/watch?v=qZfENAPMnyo)
-- [Sean Kochel: "5 MCP Servers For Vibe Coding Glory (Just Plug-In & Go)"](https://www.youtube.com/watch?v=LqTQi8qexJM)
-
-## 📄 License
-
-MIT
+- upstream Context7 코드와 문서: MIT (`LICENSE` 원문 보존)
+- Logent가 작성한 Kotlin 플러그인과 Gradle·스크립트: GPL-3.0 (`plugin/LICENSE`)

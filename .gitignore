@@ -187,3 +187,12 @@ src/test/questions*
 
 # mcpb bundles are built in CI and attached to GitHub releases
 *.mcpb
+
+# Logent Gradle plugin build
+/build/
+/plugin/build/
+/.gradle/
+/.kotlin/
+/local.properties
+*.iml
+captures/

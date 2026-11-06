@@ -1,0 +1,32 @@
+# context7-logent 출처와 Logent 변경
+
+## 원본
+
+- 저장소: https://github.com/upstash/context7
+- 커밋: `1ccf58e6e7f68357ef95c8b84181255d5ffa5c05`
+- 패키지 버전: `1.0.0` (`package.json`)
+- 라이선스: MIT License, Copyright (c) 2021 Upstash, Inc.
+- 라이선스 원문: `LICENSE`
+
+이 저장소는 `upstash/context7`의 실제 GitHub 포크(`logentworld/context7-logent`)예요.
+upstream 이력은 그대로 보존하고, Logent 변경만 `logent` 브랜치에 얹었어요. 원본 README는
+`README.upstream.md`에 원문 그대로 남겼어요.
+
+## Logent에서 바꾼 것
+
+- `dev.logent.context7` Kotlin 플러그인을 추가했어요. 이 코드는 Logent가 새로 작성했고
+  upstream TypeScript 코드를 복사하지 않았어요.
+- `context7` 도구는 기존 Logent 코어의 v3 검색·결과 정규화·오류 문구·`<untrusted_web>`
+  경계를 그대로 옮겨요. 네트워크는 `PluginHost.http`로만 호출해요.
+- API 키는 SECRET 설정, 엔드포인트는 TEXT 설정으로 선언했어요. 키가 없으면 명확한 설정
+  안내 오류를 돌려주고 요청하지 않아요.
+- `.lpg` 패키징용 Gradle 스캐폴딩과 서명 스크립트를 추가했어요.
+- upstream의 `setup/`, Claude 마켓플레이스 메타데이터, TypeScript 패키지·문서는 저장소에
+  원본 그대로 두되 `.lpg`에는 넣지 않아요.
+- 루트 README를 Logent 설치·설정·검증 안내로 바꾸고 원문은 `README.upstream.md`에 보존했어요.
+
+## 라이선스 구분
+
+- upstream Context7의 코드·문서·자산: MIT License. 원문은 루트 `LICENSE`에 그대로 있어요.
+- Logent가 작성한 Kotlin 플러그인과 Gradle·스크립트: GNU General Public License v3.0.
+  전문은 `plugin/LICENSE`에 있어요.

@@ -1,7 +1,7 @@
-package dev.logent.context7
+package com.sleepysoong.logent.context7
 
-import dev.logent.plugin.PluginHttpRequest
-import dev.logent.plugin.PluginHttpResponse
+import com.sleepysoong.logent.plugin.PluginHttpRequest
+import com.sleepysoong.logent.plugin.PluginHttpResponse
 import java.net.SocketTimeoutException
 import java.net.URLEncoder
 import kotlinx.coroutines.runBlocking

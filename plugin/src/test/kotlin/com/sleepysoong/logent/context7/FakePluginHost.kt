@@ -1,14 +1,14 @@
-package dev.logent.context7
+package com.sleepysoong.logent.context7
 
-import dev.logent.plugin.PluginHost
-import dev.logent.plugin.PluginHttpRequest
-import dev.logent.plugin.PluginHttpResponse
-import dev.logent.plugin.ProcessResult
+import com.sleepysoong.logent.plugin.PluginHost
+import com.sleepysoong.logent.plugin.PluginHttpRequest
+import com.sleepysoong.logent.plugin.PluginHttpResponse
+import com.sleepysoong.logent.plugin.ProcessResult
 
 /** 네트워크와 셸을 직접 부르지 않고 요청·응답을 붙잡아 두는 테스트 호스트예요. */
 internal class FakePluginHost(
     override val appVersion: String = "0.0.0-test",
-    override val apkPath: String = "/data/app/~~abc/dev.logent-1/base.apk",
+    override val apkPath: String = "/data/app/~~abc/com.sleepysoong.logent-1/base.apk",
     private val values: Map<String, String> = emptyMap(),
     var respond: suspend (PluginHttpRequest) -> Result<PluginHttpResponse> = {
         Result.failure(IllegalStateException("테스트에서 HTTP 응답을 준비하지 않았어요."))

@@ -1,15 +1,15 @@
-package dev.logent.context7
+package com.sleepysoong.logent.context7
 
-import dev.logent.plugin.LogentPlugin
-import dev.logent.plugin.PluginHost
-import dev.logent.plugin.PluginSetting
-import dev.logent.plugin.PluginSettingKind
-import dev.logent.plugin.PluginTool
-import dev.logent.plugin.ToolAccess
-import dev.logent.plugin.ToolResult
-import dev.logent.plugin.stringProperty
-import dev.logent.plugin.text
-import dev.logent.plugin.toolSpec
+import com.sleepysoong.logent.plugin.LogentPlugin
+import com.sleepysoong.logent.plugin.PluginHost
+import com.sleepysoong.logent.plugin.PluginSetting
+import com.sleepysoong.logent.plugin.PluginSettingKind
+import com.sleepysoong.logent.plugin.PluginTool
+import com.sleepysoong.logent.plugin.ToolAccess
+import com.sleepysoong.logent.plugin.ToolResult
+import com.sleepysoong.logent.plugin.stringProperty
+import com.sleepysoong.logent.plugin.text
+import com.sleepysoong.logent.plugin.toolSpec
 import kotlinx.serialization.json.JsonObject
 
 /**
@@ -118,6 +118,6 @@ class Context7Plugin : LogentPlugin {
     }
 
     companion object {
-        const val PLUGIN_ID = "dev.logent.context7"
+        const val PLUGIN_ID = "com.sleepysoong.logent.context7"
     }
 }

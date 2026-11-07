@@ -3,9 +3,9 @@ val repository = projectDir.parentFile
 val releaseVersion = repository.resolve("VERSION").readText().trim()
 require(Regex("[0-9]+[.][0-9]+[.][0-9]+").matches(releaseVersion)) { "VERSION은 x.y.z 형식으로 써 주세요." }
 val distribution = repository.resolve("build/dist")
-val pluginId = "dev.logent.context7"
+val pluginId = "com.sleepysoong.logent.context7"
 val pluginName = "Context7"
-val pluginEntry = "dev.logent.context7.Context7Plugin"
+val pluginEntry = "com.sleepysoong.logent.context7.Context7Plugin"
 
 val sourceArchive = tasks.register<Zip>("pluginSourceArchive") {
     from(repository.resolve("LICENSE"))
@@ -49,8 +49,8 @@ val pluginPackage = tasks.register<Exec>("pluginPackage") {
             "--name", pluginName,
             "--version", releaseVersion,
             "--entry", pluginEntry,
-            "--api-min", "3",
-            "--api-max", "3",
+            "--api-min", "4",
+            "--api-max", "4",
             "--key", file(key).absolutePath,
             "--public-key", publicKey.absolutePath,
             "--output", lpg.absolutePath,

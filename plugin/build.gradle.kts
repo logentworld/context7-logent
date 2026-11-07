@@ -14,7 +14,7 @@ val apiPin = Properties().apply {
 }
 
 android {
-    namespace = "dev.logent.context7"
+    namespace = "com.sleepysoong.logent.context7"
     compileSdk = 37
 
     defaultConfig {

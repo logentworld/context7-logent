@@ -1,9 +1,9 @@
-package dev.logent.context7
+package com.sleepysoong.logent.context7
 
-import dev.logent.plugin.PluginContext
-import dev.logent.plugin.PluginHttpResponse
-import dev.logent.plugin.PluginSettingKind
-import dev.logent.plugin.ToolAccess
+import com.sleepysoong.logent.plugin.PluginContext
+import com.sleepysoong.logent.plugin.PluginHttpResponse
+import com.sleepysoong.logent.plugin.PluginSettingKind
+import com.sleepysoong.logent.plugin.ToolAccess
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.jsonArray
@@ -29,7 +29,7 @@ class Context7PluginTest {
         val plugin = Context7Plugin()
         val tool = plugin.tools().single()
 
-        assertEquals("dev.logent.context7", plugin.id)
+        assertEquals("com.sleepysoong.logent.context7", plugin.id)
         assertEquals(BuildConfig.PLUGIN_VERSION, plugin.version)
         assertEquals("context7", tool.name)
         assertEquals(ToolAccess.READ_ONLY, tool.access.single())

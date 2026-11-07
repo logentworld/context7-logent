@@ -12,7 +12,7 @@ MIT 고지를 그대로 보존하고, Logent의 `.lpg` 플러그인에 필요한
 
 ## 무엇을 하나요
 
-`dev.logent.context7` 플러그인이 `context7` 도구를 제공해요. 라이브러리의 공식 문서에서
+`com.sleepysoong.logent.context7` 플러그인이 `context7` 도구를 제공해요. 라이브러리의 공식 문서에서
 최신 코드 예제와 설명을 찾아 모델에 돌려줘요. 네트워크 호출은 플러그인이 직접 하지 않고
 Logent 호스트의 공용 HTTPS 기능(`PluginHost.http`)만 써요.
 
@@ -38,11 +38,11 @@ Logent 호스트의 공용 HTTPS 기능(`PluginHost.http`)만 써요.
 
 ```text
 plugin/                 Logent Kotlin 플러그인 (GPL-3.0)
-plugin/src/main/...     dev.logent.context7 플러그인과 v3 검색 클라이언트
+plugin/src/main/...     com.sleepysoong.logent.context7 플러그인과 v3 검색 클라이언트
 plugin/src/test/...     파싱·파라미터·키 누락·응답 한도 단위 테스트
 scripts/                Gradle 실행·테스트·서명 .lpg 패키징
 gradle/, gradlew*       Gradle 9.7.1 wrapper
-plugin-api.lock         Logent Plugin API 3.3.0 고정
+plugin-api.lock         Logent Plugin API 4.0.0 고정
 content-public-key.der.b64  .lpg 서명 검증용 공개키
 ```
 
@@ -52,7 +52,7 @@ upstream의 `setup/`, Claude 마켓플레이스 메타데이터, TypeScript 패�
 
 ## 검증
 
-Plugin API 3.3.0은 GitHub Packages에서 받아요. 읽기 권한 토큰을 환경 변수로 넘겨 주세요.
+Plugin API 4.0.0은 GitHub Packages에서 받아요. 읽기 권한 토큰을 환경 변수로 넘겨 주세요.
 
 ```bash
 export GITHUB_ACTOR=<GitHub 사용자>

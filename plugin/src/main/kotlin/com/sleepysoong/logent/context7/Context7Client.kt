@@ -1,8 +1,8 @@
-package dev.logent.context7
+package com.sleepysoong.logent.context7
 
-import dev.logent.plugin.PluginHttpRequest
-import dev.logent.plugin.PluginHttpResponse
-import dev.logent.plugin.ToolResult
+import com.sleepysoong.logent.plugin.PluginHttpRequest
+import com.sleepysoong.logent.plugin.PluginHttpResponse
+import com.sleepysoong.logent.plugin.ToolResult
 import java.net.ConnectException
 import java.net.SocketTimeoutException
 import java.net.URI

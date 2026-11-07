@@ -10,6 +10,12 @@ MIT 고지를 그대로 보존하고, Logent의 `.lpg` 플러그인에 필요한
 - 원본 README 원문: [`README.upstream.md`](README.upstream.md)
 - 변경 내역: [`NOTICE`](NOTICE)
 
+`logent-plugin.json`을 `scripts/plugin-pack.py build --definition logent-plugin.json`의
+공통 정의로 사용해요. 플러그인 key는 `sleepysoong:context7`, `dependencies`는 `[]`예요.
+`sleepysoong`는 명시한 publisher 별칭이며 GitHub 인증 계정이나 소유권을 뜻하지 않아요.
+key와 의존성에서 생성한 manifest의 `requires`는 서명 metadata에 포함되고,
+`content-public-key.der.b64`에 고정한 공개키로 서명과 파일 해시를 검증해요.
+
 ## 무엇을 하나요
 
 `com.sleepysoong.logent.context7` 플러그인이 `context7` 도구를 제공해요. 라이브러리의 공식 문서에서

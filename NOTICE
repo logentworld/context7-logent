@@ -24,6 +24,10 @@ upstream 이력은 그대로 보존하고, Logent 변경만 `logent` 브랜치�
 - upstream의 `setup/`, Claude 마켓플레이스 메타데이터, TypeScript 패키지·문서는 저장소에
   원본 그대로 두되 `.lpg`에는 넣지 않아요.
 - 루트 README를 Logent 설치·설정·검증 안내로 바꾸고 원문은 `README.upstream.md`에 보존했어요.
+- `logent-plugin.json`을 공통 패키징 정의로 사용하고 `sleepysoong:context7` key와 빈
+  `dependencies`를 선언했어요. publisher는 GitHub 인증과 별개인 명시적 별칭이에요.
+  manifest의 key·빈 `requires`를 서명 metadata에 포함해 고정 공개키와 파일 해시로
+  검증해요. Kotlin HTTP 호출과 도구 동작은 바꾸지 않았어요.
 
 ## 라이선스 구분
 

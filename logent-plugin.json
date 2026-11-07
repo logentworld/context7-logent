@@ -1,0 +1,9 @@
+{
+  "id": "com.sleepysoong.logent.context7",
+  "key": "sleepysoong:context7",
+  "name": "Context7",
+  "entry": "com.sleepysoong.logent.context7.Context7Plugin",
+  "dependencies": [],
+  "apiMin": 4,
+  "apiMax": 4
+}

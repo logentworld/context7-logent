@@ -100,7 +100,7 @@ jobs:
           TAG="mcpb-v$VERSION"
           gh release view "$TAG" -R ${{ github.repository }} >/dev/null 2>&1 || \
             gh release create "$TAG" --latest=false \
-              --title "context7.mcpb $VERSION" \
+              --title "$TAG" \
               --notes "MCP Bundle for [@upstash/context7-mcp@$VERSION](https://github.com/${{ github.repository }}/releases/tag/%40upstash%2Fcontext7-mcp%40$VERSION)" \
               -R ${{ github.repository }}
           gh release upload "$TAG" packages/mcp/mcpb/context7.mcpb --clobber -R ${{ github.repository }}

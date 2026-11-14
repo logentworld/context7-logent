@@ -13,8 +13,7 @@ MIT 고지를 그대로 보존하고, Logent의 `.lpg` 플러그인에 필요한
 `logent-plugin.json`을 `scripts/plugin-pack.py build --definition logent-plugin.json`의
 공통 정의로 사용해요. 플러그인 key는 `sleepysoong:context7`, `dependencies`는 `[]`예요.
 `sleepysoong`는 명시한 publisher 별칭이며 GitHub 인증 계정이나 소유권을 뜻하지 않아요.
-key와 의존성에서 생성한 manifest의 `requires`는 서명 metadata에 포함되고,
-`content-public-key.der.b64`에 고정한 공개키로 서명과 파일 해시를 검증해요.
+key와 의존성에서 생성한 manifest의 `requires`가 `.lpg`에 함께 들어가요.
 
 ## 무엇을 하나요
 
@@ -46,10 +45,9 @@ Logent 호스트의 공용 HTTPS 기능(`PluginHost.http`)만 써요.
 plugin/                 Logent Kotlin 플러그인 (GPL-3.0)
 plugin/src/main/...     com.sleepysoong.logent.context7 플러그인과 v3 검색 클라이언트
 plugin/src/test/...     파싱·파라미터·키 누락·응답 한도 단위 테스트
-scripts/                Gradle 실행·테스트·서명 .lpg 패키징
+scripts/                Gradle 실행·테스트·.lpg 패키징
 gradle/, gradlew*       Gradle 9.7.1 wrapper
 plugin-api.lock         Logent Plugin API 4.0.0 고정
-content-public-key.der.b64  .lpg 서명 검증용 공개키
 ```
 
 upstream의 `setup/`, Claude 마켓플레이스 메타데이터, TypeScript 패키지와 문서는 저장소에
@@ -69,14 +67,13 @@ export GITHUB_TOKEN=<packages:read 권한 토큰>
 JVM 단위 테스트와 Android lint를 실행해요. 테스트는 실제 Context7 서버를 부르지 않고
 가짜 transport로 요청·응답을 검사해요.
 
-서명된 `.lpg`까지 만들려면 Git 밖에 둔 개인 키 파일을 지정해요.
+`.lpg`를 만들려면 아래처럼 실행해요.
 
 ```bash
-LOGENT_PLUGIN_SIGNING_KEY_FILE=/secure/logent-plugin.pem ./scripts/build.sh
+./scripts/build.sh
 ```
 
-`build/dist/`에 `.lpg`, `.aar`, 소스 ZIP, `SHA256SUMS`가 생겨요. 공개키를 따로 쓰려면
-`LOGENT_PLUGIN_PUBLIC_KEY_FILE`을 지정해요.
+`build/dist/<name>-v<version>.lpg` 하나가 생겨요.
 
 ## upstream 병합
 
